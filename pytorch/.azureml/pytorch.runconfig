@@ -1,0 +1,29 @@
+{
+    "script": "train.py",
+    "framework": "Python",
+    "communicator": "None",
+    "target": "aml-compute",
+    "environment": {
+        "python": {
+            "interpreterPath": "python",
+            "userManagedDependencies": false,
+            "condaDependencies": {
+                "dependencies":[
+                    "python=3.6.2", 
+                    {
+                    "pip":[
+                        "azureml-defaults",
+                        "torch",
+                        "torchvision"
+                        ]                    
+                    } 
+                ]
+            }
+        },
+        "docker": {
+            "baseImage": "mcr.microsoft.com/azureml/base:0.2.2",
+            "enabled": true,
+            "gpuSupport": true
+        }
+    }
+}
