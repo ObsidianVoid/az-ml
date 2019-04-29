@@ -1,6 +1,6 @@
 {
     "script": "train.py",
-    "framework": "PyTorch",
+    "framework": "Python",
     "communicator": "None",
     "environment": {
         "python": {

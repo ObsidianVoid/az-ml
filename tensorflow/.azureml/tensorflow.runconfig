@@ -1,6 +1,6 @@
 {
     "script": "train.py",
-    "framework": "TensorFlow",
+    "framework": "Python",
     "communicator": "None",
     "environment": {
         "python": {
