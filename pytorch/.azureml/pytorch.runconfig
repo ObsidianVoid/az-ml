@@ -22,12 +22,7 @@
         "docker": {
             "baseImage": "mcr.microsoft.com/azureml/base:0.2.2",
             "enabled": true,
-            "gpuSupport": true,
-            "baseImageRegistry":{
-                "address": "",
-                "username": "",
-                "password": ""
-            }
+            "gpuSupport": true
         }
     },
     "nodeCount": 1
