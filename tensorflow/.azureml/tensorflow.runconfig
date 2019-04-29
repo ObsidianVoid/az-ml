@@ -2,7 +2,7 @@
     "script": "train.py",
     "framework": "Python",
     "communicator": "None",
-    "target": "aml-compute",
+    "target": "amlcompute",
     "environment": {
         "python": {
             "interpreterPath": "python",
