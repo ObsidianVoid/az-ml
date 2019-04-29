@@ -6,13 +6,14 @@
     "environment": {
         "python": {
             "interpreterPath": "python",
-            "userManagedDependencies": false,
+            "userManagedDependencies": true,
             "condaDependencies": {
                 "dependencies":[
                     "python=3.6.2", 
                     {
                     "pip":[
                         "azureml-defaults",
+                        "torch",
                         "torchvision"
                         ]                    
                     } 
@@ -22,7 +23,13 @@
         "docker": {
             "baseImage": "mcr.microsoft.com/azureml/base:0.2.2",
             "enabled": true,
-            "gpuSupport": true
+            "gpuSupport": true,
+            "baseImageRegistry":{
+                "address": "",
+                "username": "",
+                "password": ""
+            }
         }
-    }
+    },
+    "nodeCount": 1
 }
