@@ -1,6 +1,5 @@
 {
     "script": "train.py",
-    "target": "amlcompute",
     "framework": "Python",
     "communicator": "None",
     "environment": {
