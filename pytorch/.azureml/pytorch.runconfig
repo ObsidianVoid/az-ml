@@ -12,7 +12,6 @@
                     {
                     "pip":[
                         "azureml-defaults",
-                        "torch",
                         "torchvision"
                         ]                    
                     } 
