@@ -12,7 +12,7 @@ def init():
     tf.reset_default_graph()
     # note here "sklearn_regression_model.pkl" is the name of the model registered under
     # this is a different behavior than before when the code is run locally, even though the code is the same.
-    model_path = Model.get_model_path('amlmodel') + "/"
+    model_path = Model.get_model_path('aml-model') + "/"
     saver =  tf.train.import_meta_graph(model_path + "mnist-tf.model.meta")
     graph = tf.get_default_graph()
     sess = tf.Session()
@@ -39,7 +39,7 @@ def init():
     global model
     # note here "sklearn_regression_model.pkl" is the name of the model registered under
     # this is a different behavior than before when the code is run locally, even though the code is the same.
-    model_path = Model.get_model_path('amlmodel')
+    model_path = Model.get_model_path('aml-model')
     # deserialize the model file back into a sklearn model
     model = joblib.load(model_path)
 

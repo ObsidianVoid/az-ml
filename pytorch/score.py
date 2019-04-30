@@ -18,7 +18,7 @@ except AttributeError:
 
 def init():
     global model
-    model_path = Model.get_model_path('amlmodel')
+    model_path = Model.get_model_path('aml-model')
     model = torch.load(model_path)
     model.eval()
 

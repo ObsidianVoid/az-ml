@@ -6,7 +6,7 @@ from azureml.core.model import Model
 
 def init():
     global model
-    model_path = Model.get_model_path('amlmodel')
+    model_path = Model.get_model_path('aml-model')
     model = joblib.load(model_path)
 
 def run(raw_data):
