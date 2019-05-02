@@ -40,7 +40,7 @@ for ep in range(epoch_num):  # epochs loop
     loss = criterion(output, labels)        # calculate the loss
 
     if not ep%500:
-        print('Epoch: {} - loss: {}'.format(ep, loss.data[0]))
+        # print('Epoch: {} - loss: {}'.format(ep, loss.data[0]))
 
     # Backward pass and updates
     loss.backward()                         # calculate the gradients (backpropagation)

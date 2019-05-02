@@ -14,6 +14,7 @@
                     "pip":[
                         "azureml-defaults",
                         "scikit-learn",
+                        "numpy",
                         "torch",
                         "torchvision",
                         "matplotlib"
