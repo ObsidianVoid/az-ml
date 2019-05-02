@@ -39,7 +39,7 @@ for ep in range(epoch_num):  # epochs loop
     output = linear_regression(features)
     loss = criterion(output, labels)        # calculate the loss
 
-    if not ep%500:
+    # if not ep%500:
         # print('Epoch: {} - loss: {}'.format(ep, loss.data[0]))
 
     # Backward pass and updates
