@@ -3,7 +3,5 @@ dependencies:
   - python=3.6.2
   - pip:
     - azureml-defaults
-    - scikit-learn
     - numpy
-    - torchvision
-    - matplotlib
+    - torch
