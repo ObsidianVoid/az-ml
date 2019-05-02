@@ -2,6 +2,7 @@
     "script": "train.py",
     "framework": "Python",
     "communicator": "None",
+    "target": "cpu",
     "environment": {
         "python": {
             "interpreterPath": "python",
@@ -9,17 +10,17 @@
             "condaDependencies": {
                 "dependencies":[
                     "python=3.6.2", 
+                    "scikit-learn",
                     {
                     "pip":[
-                        "azureml-defaults",
-                        "scikit-learn"
+                        "azureml-defaults"
                         ]                    
                     } 
                 ]
             }
         },
         "docker": {
-            "baseImage": "mcr.microsoft.com/azureml/base:0.2.2",
+            "baseImage": "mcr.microsoft.com/azureml/base:0.2.4",
             "enabled": true,
             "gpuSupport": true
         }
