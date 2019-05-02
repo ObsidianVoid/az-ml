@@ -5,4 +5,3 @@ dependencies:
     - azureml-defaults
     - scikit-learn
     - numpy
-    - inference-schema[numpy-support]

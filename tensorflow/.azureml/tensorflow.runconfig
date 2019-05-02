@@ -10,14 +10,12 @@
             "condaDependencies": {
                 "dependencies":[
                     "python=3.6.2",
-                    "scikit-learn",
-                    "tensorflow",
-                    "matplotlib",
                     {
                     "pip":[
                         "azureml-defaults",
+                        "scikit-learn",
                         "tensorflow",
-                        "matplotlib",
+                        "matplotlib"
                         ]
                     }
                 ]

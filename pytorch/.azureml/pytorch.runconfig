@@ -13,8 +13,10 @@
                     {
                     "pip":[
                         "azureml-defaults",
+                        "scikit-learn",
                         "torch",
-                        "torchvision"
+                        "torchvision",
+                        "matplotlib"
                         ]
                     }
                 ]

@@ -1,16 +1,9 @@
 name: project_environment
 dependencies:
   - python=3.6.2
-  - scikit-learn
-  - numpy
-  - matplotlib
-  - torchvision
-
   - pip:
     - azureml-defaults
-    - numpy==1.14.2
-    - pandas
-    - scipy==1.0.0
-    - scikit-learn==0.19.1
-    - matplotlib
+    - scikit-learn
+    - numpy
     - torchvision
+    - matplotlib
