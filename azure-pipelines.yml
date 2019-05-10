@@ -56,6 +56,7 @@ stages:
         inlineScript: |
           # install the azure ml cli extension
           az extension add -n azure-cli-ml
+        workingDirectory: '$(runConfig)'
 
     - task: AzureCLI@1
       displayName: Setup
@@ -69,6 +70,7 @@ stages:
           { az ml computetarget create amlcompute -n cpu-cluster --max-nodes 1 -s STANDARD_D3_V2 -w $(workspaceName) -g $(resourceGroupName); } &&
           # Attach a workspace configuration to a folder to enable CLI contextual awareness.
           { az ml folder attach -w $(workspaceName); }
+        workingDirectory: '$(runConfig)'
 
     - task: AzureCLI@1
       displayName: 'Train Model'
@@ -80,6 +82,7 @@ stages:
           { az ml run submit-script -c $(runConfig) -t runmetadata.json; } &&
           # Register a model with Azure Machine Learning.
           { az ml model register -n $(modelName) --asset-path $(modelAssetPath) -f runmetadata.json -t modelmetadata.json; }
+        workingDirectory: '$(runConfig)'
 
 - stage: Deploy
   displayName: Deploy stage
@@ -103,6 +106,7 @@ stages:
               inlineScript: |
                 # install the azure ml cli extension
                 az extension add -n azure-cli-ml
+              workingDirectory: '$(runConfig)'
 
           - task: AzureCLI@1
             displayName: 'Deploy Model'
@@ -113,3 +117,4 @@ stages:
                 # Deploy the registered model to AKS.
                 { az ml computetarget create aks -n $(serviceName) -w $(workspaceName) -g $(resourceGroupName); } &&
                 { az ml model deploy -n $(serviceName) --overwrite -f modelmetadata.json --ic $(inferenceConfigFile) --dc $(deploymentConfigFile) --ct $(serviceName); }
+              workingDirectory: '$(runConfig)'
