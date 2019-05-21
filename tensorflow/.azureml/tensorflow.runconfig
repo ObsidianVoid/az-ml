@@ -1,0 +1,30 @@
+{
+    "script": "train.py",
+    "framework": "Python",
+    "communicator": "None",
+    "target": "cpu-cluster",
+    "environment": {
+        "python": {
+            "interpreterPath": "python",
+            "userManagedDependencies": false,
+            "condaDependencies": {
+                "dependencies":[
+                    "python=3.6.2",
+                    {
+                    "pip":[
+                        "azureml-defaults",
+                        "scikit-learn",
+                        "tensorflow",
+                        "matplotlib"
+                        ]
+                    }
+                ]
+            }
+        },
+        "docker": {
+            "baseImage": "mcr.microsoft.com/azureml/base:0.2.4",
+            "enabled": true,
+            "gpuSupport": true
+        }
+    }
+}
