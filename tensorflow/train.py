@@ -40,7 +40,7 @@ y, cost = calc(train_features, train_prices)
 
 # Feel free to tweak these 2 values:
 
-learning_rate = 0.2
+learning_rate = 0.025
 
 epochs = 3000
 
